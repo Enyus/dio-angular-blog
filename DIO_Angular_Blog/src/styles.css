@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('./assets/stylesheets/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --main-background-color: #090D1F;
+    --main-text-color: #fff;
+    --secondary-text-color: #6941C6;
+    font-size: 10px;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    padding: 0 1.45rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}

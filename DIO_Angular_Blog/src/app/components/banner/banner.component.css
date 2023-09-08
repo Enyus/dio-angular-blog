@@ -1,0 +1,32 @@
+h1 {
+    font-size: 3.8rem;
+    line-height: 4rem;
+    border-bottom: solid var(--main-text-color) 1px;
+    border-top: solid var(--main-text-color) 1px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    padding: 1rem 0;
+}
+
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 10rem;
+        line-height: 12rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    h1 {
+        font-size: 16rem;
+        line-height: 18rem;
+    }
+}
