@@ -1,0 +1,11 @@
+<a class="post__container">
+    <img src="{{img}}" alt="post image" class="post__image">
+    <div class="post__texts">
+        <span class="post__date">{{postDate}}</span>
+        <h2 class="post__title">{{title}}</h2>
+        <p class="post__headline">{{chamada}}</p>
+    </div>
+    <ul class="post__taglist">
+        <li class="post__taglist--item" *ngFor="let tag of tags">{{tag}}</li>
+    </ul>
+</a>

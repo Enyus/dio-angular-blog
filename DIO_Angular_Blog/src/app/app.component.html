@@ -2,4 +2,13 @@
 
 <app-banner></app-banner>
 
+<post 
+    *ngFor="let post of posts"
+    img={{post.img}}
+    postDate={{post.postDate}}
+    title={{post.title}}
+    chamada={{post.chamada}}
+    tags={{post.tags}}
+></post>
+
 <router-outlet></router-outlet>
