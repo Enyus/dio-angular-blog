@@ -15,6 +15,12 @@
     object-fit: cover;
 }
 
+.post__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
 .post__texts {
     display: flex;
     flex-direction: column;
@@ -50,13 +56,14 @@
 }
 
 @media screen and (min-width: 768px) {
-
+    .post__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-
-}
-
-@media screen and (min-width: 1440px) {
-
+    .post__container {
+        width: 100%;
+    }
 }

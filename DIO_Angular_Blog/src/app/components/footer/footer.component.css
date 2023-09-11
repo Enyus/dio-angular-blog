@@ -1,0 +1,54 @@
+footer {
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-top: 1px solid var(--main-text-color);
+    padding-top: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.github::before, .linkedin::before, .dio::before {
+    content: "";
+    border: white 1px solid;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: cover;
+    vertical-align: top;
+    margin-right: 0.5rem;
+}
+
+.github::before {
+    background-image: url('../../../assets/Images/github.png');
+}
+
+.linkedin::before {
+    background-image: url('../../../assets/Images/linkedin.png');
+}
+
+.dio::before {
+    background-image: url('../../../assets/Images/dio.png');
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        flex-direction: row-reverse;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+}

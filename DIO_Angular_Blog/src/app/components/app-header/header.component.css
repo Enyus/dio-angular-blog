@@ -5,6 +5,8 @@ header {
     font-size: 1.8rem;
     line-height: 2.4rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header__logo {
