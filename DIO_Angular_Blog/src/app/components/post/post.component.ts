@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core'
+import Tag from 'src/app/app.component';
 
 @Component({
   selector: 'post',
@@ -11,5 +12,5 @@ export class PostComponent {
   @Input() postDate!:string;
   @Input() title!:string;
   @Input() chamada!:string;
-  @Input() tags!:string[];
+  @Input() tags!:Tag[];
 }
