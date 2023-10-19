@@ -1,20 +1,7 @@
 import { Component } from '@angular/core';
 import { fakeDB } from 'src/assets/fakeDB';
-
-interface Posts {
-  id: number;
-  img: string;
-  postDate: string;
-  title: string;
-  headline: string;
-  tags: Tag[];
-  text: string;
-}
-
-interface Tag {
-  id: number;
-  name: string;
-}
+import { Post } from './model/Post';
+import { PostService } from './service/post.service';
 
 @Component({
   selector: 'app-root',
@@ -23,20 +10,15 @@ interface Tag {
 })
 export class AppComponent {
   title = 'Angular Cheat Sheet';
-  posts:Posts[] = getPosts();
-}
+  posts:Post[] = [];
 
-function getPosts():Posts[] {
-  let postsToShow:Posts[] = fakeDB;
-  try {
-    fetch('https://dio-api-angular-blog-production.up.railway.app/posts')
-      .then(res => res.json())
-      .then(res => postsToShow = res)
-  } catch (error) {
-    console.error(error);
-    postsToShow = fakeDB;
+  constructor(private postService:PostService) {
+    this.obterPosts();
   }
-  return postsToShow;
-}
 
-export default Tag;
+  obterPosts(){
+    this.postService.obterTodos()
+      .then(res => this.posts = res)
+      .catch(console.error);
+  }
+}

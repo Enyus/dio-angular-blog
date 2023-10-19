@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Input } from '@angular/core'
-import Tag from 'src/app/app.component';
+import { Tag } from 'src/app/model/Tag';
 
 @Component({
   selector: 'post',
